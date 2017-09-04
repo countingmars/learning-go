@@ -9,7 +9,7 @@ import (
 func main() {
 	log.Path("./logs")
 	
-	gocron.Every(2).Seconds().Do(crawler.Crawl)
+	gocron.Every(10).Seconds().Do(crawler.Crawl)
 
 	<- gocron.Start()
 }

@@ -13,6 +13,9 @@ func Path(path string) {
 func Flush() {
 	glog.Flush()
 }
-func Info(s string) {
-	glog.Info(s)	
+func Info(args ...interface{}) {
+	glog.Info(args)	
+}
+func Fatal(args ...interface{}) {
+	glog.Fatal(args)
 }
