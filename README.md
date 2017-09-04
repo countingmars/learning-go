@@ -10,4 +10,4 @@ You can learn the usage of the libraries:
 - goquery
 
 As of now, that's all ... 
-No big deal.
+no big deal.
