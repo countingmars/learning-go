@@ -5,9 +5,13 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 func Crawl() {
+	defer log.Flush()
+	log.Info("Started crawl")
+
 	doc, err := goquery.NewDocument("https://blog.golang.org")
 	if err != nil {
 		log.Fatal(err)
+		return
 	}
 
 	titles := make([]string, 10)
@@ -16,5 +20,5 @@ func Crawl() {
 		titles = append(titles, title)
 	})
 	log.Info(titles)	
-	log.Flush()
+	log.Info("Finished crawl")
 }
